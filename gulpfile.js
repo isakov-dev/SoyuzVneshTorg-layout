@@ -1,16 +1,20 @@
 let gulp = require('gulp'),
     sass = require('gulp-sass'),
-    gcmq = require('gulp-group-css-media-queries');
+    gcmq = require('gulp-group-css-media-queries'),
+    include = require('gulp-include');
 
 let path = {
     build: {
-        css: './',
+        css: 'css/',
+        html: './',
     },
     src: {
-        css: 'scss/style.scss',
+        css: 'src/scss/style.scss',
+        html: 'src/html/*.html',
     },
     watch: {
-        css: 'scss/**/*.scss',
+        css: 'src/scss/**/*.scss',
+        html: 'src/html/**/*.html',
     }
 };
 
@@ -21,8 +25,16 @@ function styles() {
         .pipe(gulp.dest(path.build.css))
 }
 
-function watch() {
-    gulp.watch(path.watch.css, styles)
+function html() {
+    gulp.src(path.src.html)
+        .pipe(include())
+            .on('error', console.log)
+        .pipe(gulp.dest(path.build.html))
 }
 
-exports.default = gulp.parallel(styles, watch);
+function watch() {
+    gulp.watch(path.watch.css, styles)
+    gulp.watch(path.watch.html, html)
+}
+
+exports.default = gulp.parallel(styles, html, watch);
