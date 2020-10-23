@@ -34,6 +34,23 @@ h6 {
   padding: unset;
 }
 
+.title {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  color: #1c1c1c;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #014430;
+  text-align: center;
+}
+
 .button {
   display: flex;
   width: max-content;
@@ -107,7 +124,7 @@ h6 {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #1C1C1C;
+  color: #1c1c1c;
 }
 
 .header__callback {
@@ -147,7 +164,7 @@ h6 {
   font-size: 15px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #1C1C1C;
+  color: #1c1c1c;
 }
 
 .desktop-menu__link_active,
@@ -181,6 +198,48 @@ h6 {
 
 .hero__button {
   margin-top: 70px;
+}
+
+.services {
+  padding: 50px 0 56px;
+  background: url("../images/services/bg.png");
+}
+
+.services__row {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.services__item {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services__icon {
+  width: 100px;
+  max-width: 100%;
+}
+
+.services__caption {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.services__button {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 1199.98px) {

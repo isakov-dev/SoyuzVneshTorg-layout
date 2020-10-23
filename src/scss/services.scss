@@ -1,0 +1,43 @@
+.services {
+
+  padding: 50px 0 56px;
+  background: url("../images/services/bg.png");
+
+  &__row {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  &__item {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 100px;
+    max-width: 100%;
+  }
+
+  &__caption {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &__button {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

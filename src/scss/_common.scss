@@ -36,6 +36,27 @@ h6 {
 //font-family: 'Montserrat', sans-serif;
 //font-family: 'Roboto', sans-serif;
 
+.title {
+
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  color: $almost-black;
+  text-align: center;
+
+}
+
+.subtitle {
+
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: $dark-green;
+  text-align: center;
+
+}
+
 .button {
 
   display: flex;
