@@ -31,6 +31,10 @@ a:hover {
   height: 100px;
 }
 
+.header__logo {
+  max-height: 77px;
+}
+
 .header__menu {
   display: flex;
   justify-content: center;
@@ -43,10 +47,6 @@ a:hover {
 }
 
 .header__phone {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #1C1C1C;
   display: flex;
   align-items: center;
 }
@@ -58,6 +58,13 @@ a:hover {
   background: url("../images/header/phone-icon.svg") center no-repeat;
   background-size: contain;
   margin-right: 15px;
+}
+
+.header__number {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1C1C1C;
 }
 
 .header__callback {
@@ -103,4 +110,38 @@ a:hover {
 .desktop-menu__link_active,
 .desktop-menu__link:hover {
   border-bottom-color: #E33100;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .header__menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .header__row {
+    height: 90px;
+  }
+
+  .header__logo {
+    max-height: 60px;
+  }
+
+  .header__phone {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+  }
+
+  .header__phone::before {
+    margin-right: 0;
+  }
+
+  .header__number {
+    display: none;
+  }
+
+  .header__callback {
+    display: none;
+  }
 }

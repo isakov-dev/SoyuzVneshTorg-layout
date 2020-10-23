@@ -4,12 +4,34 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 
   &__row {
+
     height: 100px;
+
+    @include phone {
+      height: 90px;
+    }
+
+  }
+
+  &__logo {
+
+    max-height: 77px;
+
+    @include phone {
+      max-height: 60px;
+    }
+
   }
 
   &__menu {
+
     display: flex;
     justify-content: center;
+
+    @include desktop {
+      display: none;
+    }
+
   }
 
   &__contacts {
@@ -20,20 +42,41 @@
 
   &__phone {
 
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: $almost-black;
     display: flex;
     align-items: center;
 
+    @include phone {
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+    }
+
     &::before {
+
       content: "";
       width: 20px;
       height: 20px;
       background: url("../images/header/phone-icon.svg") center no-repeat;
       background-size: contain;
       margin-right: 15px;
+
+      @include phone {
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+  &__number {
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $almost-black;
+
+    @include phone {
+      display: none;
     }
 
   }
@@ -45,6 +88,10 @@
     line-height: 17px;
     text-decoration: underline;
     color: $green;
+
+    @include phone {
+      display: none;
+    }
 
     &:hover {
       color: $green;
