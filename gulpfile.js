@@ -1,7 +1,7 @@
 let gulp = require('gulp'),
     sass = require('gulp-sass'),
     gcmq = require('gulp-group-css-media-queries'),
-    include = require('gulp-include');
+    fileinclude = require('gulp-file-include');
 
 let path = {
     build: {
@@ -26,10 +26,9 @@ function styles() {
 }
 
 function html() {
-    gulp.src(path.src.html)
-        .pipe(include())
-            .on('error', console.log)
-        .pipe(gulp.dest(path.build.html))
+    return gulp.src(path.src.html)
+        .pipe(fileinclude())
+        .pipe(gulp.dest(path.build.html));
 }
 
 function watch() {
@@ -37,4 +36,4 @@ function watch() {
     gulp.watch(path.watch.html, html)
 }
 
-exports.default = gulp.parallel(styles, html, watch);
+exports.default = gulp.parallel(html, styles, watch);

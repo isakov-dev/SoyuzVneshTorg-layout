@@ -19,7 +19,9 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-include": "^2.4.1",
     "gulp-sass": "^4.1.0"
+  },
+  "devDependencies": {
+    "gulp-file-include": "^2.2.2"
   }
 }
