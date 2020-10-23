@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  text-align: left;
+}
+
+a,
+a:hover {
+  text-decoration: unset;
+  color: unset;
+}
+
+.header {
+  background: #E5FFF7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.header__row {
+  height: 100px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: center;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header__phone {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1C1C1C;
+  display: flex;
+  align-items: center;
+}
+
+.header__phone::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("../images/header/phone-icon.svg") center no-repeat;
+  background-size: contain;
+  margin-right: 15px;
+}
+
+.header__callback {
+  margin-top: 3px;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: underline;
+  color: #014430;
+}
+
+.header__callback:hover {
+  color: #014430;
+  text-decoration: none;
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-menu__item {
+  display: flex;
+  height: 100%;
+}
+
+.desktop-menu__link {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 17px;
+  border-bottom: 3px solid transparent;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #1C1C1C;
+}
+
+.desktop-menu__link_active,
+.desktop-menu__link:hover {
+  border-bottom-color: #E33100;
+}
