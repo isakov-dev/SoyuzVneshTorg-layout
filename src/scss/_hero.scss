@@ -1,0 +1,92 @@
+.hero {
+
+  padding: 126px 0 157px;
+  background: url("../images/hero/bg.png") no-repeat right 54px center;
+
+  @include desktop {
+    background-position: right -182px center;
+  }
+
+  @include laptop {
+    padding: 82px 0 111px;
+    background: url("../images/hero/bg-map.svg") no-repeat center top 82px;
+    background-size: 100% auto;
+  }
+
+  @include tablet {
+    padding: 41px 0 65px;
+  }
+
+  &__title {
+
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 61px;
+    color: $dark-green;
+
+    @include laptop {
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include tablet {
+      font-size: 26px;
+      line-height: 35px;
+    }
+
+  }
+
+  &__text {
+
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 50px;
+    color: $dark-gray;
+
+    @include laptop {
+      margin-top: 30px;
+      font-size: 24px;
+      line-height: 41px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 35px;
+      margin-top: 20px;
+    }
+
+  }
+
+  &__image {
+
+    display: none;
+
+    @include laptop {
+      margin-top: 30px;
+      display: block;
+      max-width: 100%;
+    }
+
+    @include tablet {
+      margin-top: 20px;
+    }
+
+  }
+
+  &__button {
+
+    margin-top: 70px;
+
+    @include laptop {
+      margin-top: 45px;
+    }
+
+    @include tablet {
+      margin-top: 30px;
+      width: 100%;
+    }
+
+  }
+
+}

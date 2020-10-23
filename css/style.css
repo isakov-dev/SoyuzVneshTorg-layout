@@ -22,6 +22,49 @@ a:hover {
   color: unset;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: unset;
+  line-height: unset;
+  margin: unset;
+  padding: unset;
+}
+
+.button {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 0 35px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(221.11deg, #01C68B 0%, #004933 100%);
+  border: none;
+}
+
+.button:hover {
+  background: #00976A;
+  cursor: pointer;
+}
+
+.button:active {
+  background: #014430;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
 .header {
   background: #E5FFF7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -72,11 +115,11 @@ a:hover {
   font-size: 14px;
   line-height: 17px;
   text-decoration: underline;
-  color: #014430;
+  color: #00976A;
 }
 
 .header__callback:hover {
-  color: #014430;
+  color: #00976A;
   text-decoration: none;
 }
 
@@ -112,9 +155,96 @@ a:hover {
   border-bottom-color: #E33100;
 }
 
+.hero {
+  padding: 126px 0 157px;
+  background: url("../images/hero/bg.png") no-repeat right 54px center;
+}
+
+.hero__title {
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 61px;
+  color: #014430;
+}
+
+.hero__text {
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 50px;
+  color: #363636;
+}
+
+.hero__image {
+  display: none;
+}
+
+.hero__button {
+  margin-top: 70px;
+}
+
 @media screen and (max-width: 1199.98px) {
   .header__menu {
     display: none;
+  }
+
+  .hero {
+    background-position: right -182px center;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .hero {
+    padding: 82px 0 111px;
+    background: url("../images/hero/bg-map.svg") no-repeat center top 82px;
+    background-size: 100% auto;
+  }
+
+  .hero__title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .hero__text {
+    margin-top: 30px;
+    font-size: 24px;
+    line-height: 41px;
+  }
+
+  .hero__image {
+    margin-top: 30px;
+    display: block;
+    max-width: 100%;
+  }
+
+  .hero__button {
+    margin-top: 45px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .hero {
+    padding: 41px 0 65px;
+  }
+
+  .hero__title {
+    font-size: 26px;
+    line-height: 35px;
+  }
+
+  .hero__text {
+    font-size: 20px;
+    line-height: 35px;
+    margin-top: 20px;
+  }
+
+  .hero__image {
+    margin-top: 20px;
+  }
+
+  .hero__button {
+    margin-top: 30px;
+    width: 100%;
   }
 }
 
