@@ -5,26 +5,12 @@
                 <div class="subtitle">Наши услуги</div>
                 <h2 class="title">Что мы предлагаем</h2>
                 <div class="services__row">
-                    <div class="services__item">
-                        <img src="../images/services/icon.svg" alt="" class="services__icon">
-                        <div class="services__caption">Таможенное оформление</div>
-                    </div>
-                    <div class="services__item">
-                        <img src="../images/services/icon.svg" alt="" class="services__icon">
-                        <div class="services__caption">Таможенное оформление</div>
-                    </div>
-                    <div class="services__item">
-                        <img src="../images/services/icon.svg" alt="" class="services__icon">
-                        <div class="services__caption">Таможенное оформление</div>
-                    </div>
-                    <div class="services__item">
-                        <img src="../images/services/icon.svg" alt="" class="services__icon">
-                        <div class="services__caption">Таможенное оформление</div>
-                    </div>
-                    <div class="services__item">
-                        <img src="../images/services/icon.svg" alt="" class="services__icon">
-                        <div class="services__caption">Таможенное оформление</div>
-                    </div>
+                    @@for (var i = 0; i < 5; i++) {
+                        <div class="services__item">
+                            <img src="../images/services/icon.svg" alt="" class="services__icon">
+                            <div class="services__caption">Таможенное оформление</div>
+                        </div>
+                    }
                 </div>
                 <button class="services__button button">Заказать услугу</button>
             </div>
