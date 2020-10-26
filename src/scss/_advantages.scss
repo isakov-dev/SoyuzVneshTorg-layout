@@ -1,0 +1,106 @@
+.advantages {
+
+  margin-top: 100px;
+
+  @include laptop {
+    margin-top: 85px;
+  }
+
+  @include tablet {
+    margin-top: 70px;
+  }
+
+  &__title {
+
+    @include tablet {
+      text-align: left;
+    }
+
+  }
+
+  &__row {
+
+    margin-top: 60px;
+    margin-bottom: -50px;
+
+    @include laptop {
+      margin-top: 45px;
+    }
+
+    @include tablet {
+      margin-top: 30px;
+      margin-bottom: -40px;
+    }
+
+  }
+
+  &__item {
+
+    display: flex;
+    align-items: start;
+    margin-bottom: 50px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+  }
+
+  &__icon {
+
+    flex-shrink: 0;
+    width: 70px;
+    height: auto;
+
+    @include laptop {
+      width: 60px;
+    }
+
+    @include tablet {
+      width: 50px;
+    }
+
+  }
+
+  &__right {
+
+    padding-left: 20px;
+    opacity: .9;
+
+    @include laptop {
+      padding-left: 15px;
+    }
+
+    @include tablet {
+      padding-left: 10px;
+    }
+
+  }
+
+  &__name {
+
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: $almost-black;
+
+    @include laptop {
+      font-size: 23px;
+      line-height: 28px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark-gray;
+  }
+
+}
