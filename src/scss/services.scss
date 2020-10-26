@@ -3,22 +3,36 @@
   padding: 50px 0 56px;
   background: url("../images/services/bg.png");
 
+  @include tablet {
+    padding: 40px 0 45px;
+  }
+
   &__row {
-    margin-top: 40px;
+    margin: 40px -15px -50px;
     display: flex;
     justify-content: center;
     align-items: start;
-    margin-left: -15px;
-    margin-right: -15px;
+    flex-wrap: wrap;
   }
 
   &__item {
+
     padding-left: 15px;
     padding-right: 15px;
     width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
+
+    @include laptop {
+      width: 33%;
+    }
+
+    @include phone {
+      width: 100%;
+    }
+
   }
 
   &__icon {
@@ -35,9 +49,20 @@
   }
 
   &__button {
+
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+
+    @include laptop {
+      margin-top: 42px;
+    }
+
+    @include tablet {
+      width: 100%;
+      margin-top: 34px;
+    }
+
   }
 
 }
