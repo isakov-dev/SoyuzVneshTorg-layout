@@ -81,7 +81,7 @@
           border-bottom: 1px dashed $orange;
           z-index: -1;
 
-          @include tablet {
+          @include phone {
             left: 55px;
             top: 0;
             width: unset;

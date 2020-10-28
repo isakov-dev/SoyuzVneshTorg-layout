@@ -642,15 +642,6 @@ h6 {
     margin-top: 40px;
   }
 
-  .stages__item:not(:last-child) .stages__index::after {
-    left: 55px;
-    top: 0;
-    width: unset;
-    height: 100%;
-    border-bottom: none;
-    border-left: 1px dashed #E33100;
-  }
-
   .stages__index {
     width: 80px;
     height: 80px;
@@ -785,6 +776,15 @@ h6 {
     width: 100%;
     flex-direction: row;
     align-items: start;
+  }
+
+  .stages__item:not(:last-child) .stages__index::after {
+    left: 55px;
+    top: 0;
+    width: unset;
+    height: 100%;
+    border-bottom: none;
+    border-left: 1px dashed #E33100;
   }
 
   .stages__right {
