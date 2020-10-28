@@ -1,0 +1,74 @@
+.questions-left {
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: url("../images/questions-left/bg.jpg") center no-repeat;
+  background-size: cover;
+
+  @include laptop {
+    background-position: left;
+    padding-top: 40px;
+  }
+
+  @include tablet {
+    padding-top: 30px;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__caption {
+
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+
+    @include desktop {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
+
+  &__form {
+
+    margin-top: 30px;
+
+    @include tablet {
+      margin-top: 20px;
+    }
+
+  }
+
+  &__plug {
+
+    height: 50px;
+    background: $dark-gray;
+    color: $white;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      height: 275px;
+    }
+
+  }
+
+  &__agreement {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 19px;
+    color: $dark-gray;
+    opacity: .7;
+  }
+
+}
