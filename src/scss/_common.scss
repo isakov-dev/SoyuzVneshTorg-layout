@@ -88,8 +88,6 @@ h6 {
   background: $green-gradient;
   border: none;
 
-
-
   &:hover {
     background: $green;
     cursor: pointer;
@@ -102,6 +100,147 @@ h6 {
 
   &:focus {
     outline: none;
+  }
+
+}
+
+/*.slider {
+
+  position: relative;
+
+  &__inner {
+    padding: 0 30px;
+  }
+
+  &__button {
+
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid $green;
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+
+}*/
+
+.slider-wrapper {
+
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (max-width: 1299.98px) {
+    padding-left: calc(50px + 12px);
+    padding-right: calc(50px + 12px);
+  }
+
+  @include tablet {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .flickity-enabled {
+
+    @include tablet {
+      padding-top: 70px;
+    }
+
+    .flickity-prev-next-button {
+
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      background: transparent;
+      border: 2px solid $green;
+      color: $green;
+
+      &.previous {
+        left: calc(-50px - 30px);
+      }
+
+      &.next {
+        right: calc(-50px - 30px);
+      }
+
+      @media (max-width: 1299.98px) {
+
+        &.previous {
+          left: calc(-50px - 12px);
+        }
+
+        &.next {
+          right: calc(-50px - 12px);
+        }
+
+      }
+
+      @media (max-width: 767.98px) {
+
+        top: 0;
+        transform: none;
+
+        &.previous {
+          left: calc(50% - 60px);
+        }
+
+        &.next {
+          right: calc(50% - 60px);
+        }
+
+      }
+
+      .flickity-button-icon {
+        width: 15px;
+        height: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        background: $green-gradient;
+        color: $white;
+        border: none;
+        width: 50px;
+        height: 50px;
+      }
+
+      &:active {
+        background: $dark-green;
+        opacity: 1;
+      }
+
+      &:disabled {
+        opacity: .3;
+        background: transparent;
+        color: $green;
+      }
+
+    }
+
+  }
+
+  &_no-mobile-buttons {
+
+    .flickity-enabled {
+
+      @include tablet {
+        padding-top: 0;
+      }
+
+      .flickity-prev-next-button {
+
+        @include tablet {
+          display: none;
+        }
+
+      }
+
+    }
+
   }
 
 }
