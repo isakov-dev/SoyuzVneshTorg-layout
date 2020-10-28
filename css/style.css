@@ -474,6 +474,50 @@ h6 {
   height: auto;
 }
 
+.contacts {
+  background: url("../images/contacts/map.jpg") center no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contacts__card {
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  padding: 30px 40px 70px;
+}
+
+.contacts__title {
+  text-align: left;
+}
+
+.contacts__list {
+  margin-top: 30px;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: start;
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts__icon {
+  width: 20px;
+  flex-shrink: 0;
+  margin-right: 15px;
+  margin-top: 2px;
+}
+
+.contacts__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #363636;
+}
+
 @media (max-width: 1299.98px) {
   .slider-wrapper {
     padding-left: calc(50px + 12px);
@@ -607,6 +651,11 @@ h6 {
   .reviews__item {
     width: 33%;
     padding: 0 12px;
+  }
+
+  .contacts {
+    padding-top: 85px;
+    padding-bottom: 85px;
   }
 }
 
@@ -767,6 +816,26 @@ h6 {
 
   .reviews__item {
     width: 50%;
+  }
+
+  .contacts {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .contacts__card {
+    padding: 30px 20px 40px;
+    border-radius: 5px;
+  }
+
+  .contacts__icon {
+    margin-top: 0;
+  }
+
+  .contacts__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
