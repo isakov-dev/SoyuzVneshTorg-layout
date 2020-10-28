@@ -1,0 +1,150 @@
+.footer {
+
+  padding: 20px 0;
+  background: $dark-green;
+  color: $white;
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+
+    position: relative;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding-right: 80px;
+
+    @include desktop {
+      padding-right: 15px;
+    }
+
+    &::after {
+
+      content: "";
+      width: 1px;
+      height: 50px;
+      background: $light-green;
+      opacity: .4;
+      position: absolute;
+      right: 45px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include desktop {
+        display: none;
+      }
+
+    }
+
+  }
+
+  &__menu-item {
+
+    @include desktop {
+      display: none;
+    }
+
+    &_logo {
+
+      @include desktop {
+        display: flex;
+      }
+
+      @include laptop {
+
+        width: 100%;
+        justify-content: center;
+
+        img {
+          width: 173px;
+        }
+
+      }
+
+    }
+
+  }
+
+  &__menu-link {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__contacts {
+
+    padding-top: 24px;
+    margin-bottom: -20px;
+
+    @include laptop {
+      padding-top: 35px;
+    }
+
+  }
+
+  &__contact {
+    display: flex;
+    align-items: start;
+    margin-bottom: 20px;
+  }
+
+  &__contact-icon {
+    width: 17px;
+    height: 17px;
+    margin-right: 17px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  &__contact-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $white;
+  }
+
+  &__copyright-line {
+
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include laptop {
+      margin-top: 40px;
+    }
+
+  }
+
+  &__copyright {
+
+    font-size: 14px;
+    line-height: 17px;
+    opacity: .8;
+    margin-right: 75px;
+
+    @include laptop {
+      width: 100%;
+      margin-bottom: 17px;
+      margin-right: 0;
+    }
+
+  }
+
+  &__powered-by {
+    display: flex;
+    margin-right: 30px;
+  }
+
+  &__rights {
+    font-size: 14px;
+    line-height: 17px;
+    opacity: .8;
+  }
+
+}

@@ -558,6 +558,96 @@ h6 {
   opacity: .7;
 }
 
+.footer {
+  padding: 20px 0;
+  background: #014430;
+  color: #ffffff;
+}
+
+.footer__left {
+  display: flex;
+  align-items: center;
+}
+
+.footer__menu {
+  position: relative;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-right: 80px;
+}
+
+.footer__menu::after {
+  content: "";
+  width: 1px;
+  height: 50px;
+  background: #E5FFF7;
+  opacity: .4;
+  position: absolute;
+  right: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer__menu-link {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer__contacts {
+  padding-top: 24px;
+  margin-bottom: -20px;
+}
+
+.footer__contact {
+  display: flex;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.footer__contact-icon {
+  width: 17px;
+  height: 17px;
+  margin-right: 17px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.footer__contact-text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.footer__copyright-line {
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  line-height: 17px;
+  opacity: .8;
+  margin-right: 75px;
+}
+
+.footer__powered-by {
+  display: flex;
+  margin-right: 30px;
+}
+
+.footer__rights {
+  font-size: 14px;
+  line-height: 17px;
+  opacity: .8;
+}
+
 @media (max-width: 1299.98px) {
   .slider-wrapper {
     padding-left: calc(50px + 12px);
@@ -595,6 +685,22 @@ h6 {
   .questions-left__caption {
     font-size: 18px;
     line-height: 27px;
+  }
+
+  .footer__menu {
+    padding-right: 15px;
+  }
+
+  .footer__menu::after {
+    display: none;
+  }
+
+  .footer__menu-item {
+    display: none;
+  }
+
+  .footer__menu-item_logo {
+    display: flex;
   }
 }
 
@@ -706,6 +812,29 @@ h6 {
   .questions-left {
     background-position: left;
     padding-top: 40px;
+  }
+
+  .footer__menu-item_logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer__menu-item_logo img {
+    width: 173px;
+  }
+
+  .footer__contacts {
+    padding-top: 35px;
+  }
+
+  .footer__copyright-line {
+    margin-top: 40px;
+  }
+
+  .footer__copyright {
+    width: 100%;
+    margin-bottom: 17px;
+    margin-right: 0;
   }
 }
 
