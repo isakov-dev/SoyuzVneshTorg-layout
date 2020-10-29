@@ -1,0 +1,71 @@
+<div class="products">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="subtitle">Наши партнеры</div>
+                <h2 class="title">Мы являемся дистрибьютором<br>следующих компаний</h2>
+                <div class="products__tabs list-group" role="tablist">
+                    <a class="products__tab active" data-toggle="list" href="#products-section-1" role="tab"
+                       aria-controls="products-section-1">
+                        <img src="images/products/logo.svg" class="products__logo" alt="">
+                    </a>
+                    @@for (var i = 2; i <= 4; i++) {
+                        <a class="products__tab" data-toggle="list" href="#products-section-`+i+`" role="tab"
+                           aria-controls="products-section-`+i+`">
+                            <img src="images/products/logo.svg" class="products__logo" alt="">
+                        </a>
+                    }
+                </div>
+                <div class="products__content tab-content">
+                    <div class="tab-pane fade show active" id="products-section-1" role="tabpanel">
+                        <div class="products__section">
+                            <div class="products__section-title">О заводе</div>
+                            <div class="products__section-description">
+                                Современная и высокотехнологичная пивоварня Казахстана - “Первый Пивзавод”.
+                                Основанный в далеком 1858 году, пивзавод дал старт развитию пивоваренной отрасли
+                                Казахстана - вот уже более 150 лет они варят для вас вкусное качественное пиво,
+                                соблюдая классические рецепты, учитывая современные тенденции и традиции пивоварения.
+                            </div>
+                        </div>
+                        <div class="products__section">
+                            <div class="products__section-title">Певко</div>
+                            <div class="products__grid">
+                                @@for (var i = 0; i < 9; i++) {
+                                    <div class="products__item product">
+                                        <div class="product__photo-wrapper" style="background-image: url('images/products/product-layout.png')">
+                                            <img src="images/products/product.png" class="product__photo" alt="">
+                                        </div>
+                                        <div class="product__name">Жигули Барное</div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="products__section">
+                            <div class="products__section-title">Напитки</div>
+                            <div class="products__grid">
+                                @@for (var i = 0; i < 2; i++) {
+                                    <div class="products__item product">
+                                        <div class="product__photo-wrapper" style="background-image: url('images/products/product-layout-2.png')">
+                                            <img src="images/products/product-2.png" class="product__photo" alt="">
+                                        </div>
+                                        <div class="product__name">Gorilla</div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    @@for (var i = 2; i <= 4; i++) {
+                        <div class="tab-pane fade" id="products-section-`+i+`" role="tabpanel">
+                            <div class="products__section">
+                                <div class="products__section-title">Тут могло быть ваше пиво</div>
+                                <div class="products__section-description">
+                                    Но его пока не завезли
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
