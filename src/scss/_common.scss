@@ -238,3 +238,28 @@ h6 {
 .tab-content>.active {
   display: block;
 }
+
+.tooltip {
+
+  width: 390px;
+  background: $white;
+  box-shadow: 0 10px 20px rgba(1, 68, 48, 0.25);
+
+  @include tablet {
+    width: 280px;
+  }
+
+  &-inner {
+
+    padding: 20px 30px;
+    font-size: 13px;
+    line-height: 20px;
+    color: $almost-black;
+
+    @include tablet {
+      padding: 10px 15px;
+    }
+
+  }
+
+}

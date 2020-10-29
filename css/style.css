@@ -148,6 +148,19 @@ h6 {
   display: block;
 }
 
+.tooltip {
+  width: 390px;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(1, 68, 48, 0.25);
+}
+
+.tooltip-inner {
+  padding: 20px 30px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #1c1c1c;
+}
+
 .header {
   background: #E5FFF7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -995,6 +1008,14 @@ h6 {
 
   .slider-wrapper_no-mobile-buttons .flickity-enabled .flickity-prev-next-button {
     display: none;
+  }
+
+  .tooltip {
+    width: 280px;
+  }
+
+  .tooltip-inner {
+    padding: 10px 15px;
   }
 
   .hero {
