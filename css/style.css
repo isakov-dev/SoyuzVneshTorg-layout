@@ -252,8 +252,18 @@ h6 {
 }
 
 .hero {
+  position: relative;
   padding: 126px 0 157px;
-  background: url("../images/hero/bg.png") no-repeat right 54px center;
+  overflow: hidden;
+}
+
+.hero_index {
+  background: url("../images/hero/map.svg") no-repeat right 54px center;
+}
+
+.hero_section {
+  background: url("../images/hero/section-bg.png") no-repeat center;
+  background-size: cover;
 }
 
 .hero__title {
@@ -272,7 +282,9 @@ h6 {
 }
 
 .hero__image {
-  display: none;
+  position: absolute;
+  bottom: 70px;
+  right: 80px;
 }
 
 .hero__button {
@@ -758,8 +770,12 @@ h6 {
     display: none;
   }
 
-  .hero {
+  .hero_index {
     background-position: right -182px center;
+  }
+
+  .hero__image {
+    right: -120px;
   }
 
   .production__section {
@@ -810,10 +826,13 @@ h6 {
     line-height: 42px;
   }
 
+  .hero_index {
+    background-position: top 80px center;
+    background-size: 120% auto;
+  }
+
   .hero {
     padding: 82px 0 111px;
-    background: url("../images/hero/bg-map.svg") no-repeat center top 82px;
-    background-size: 100% auto;
   }
 
   .hero__title {
@@ -828,6 +847,7 @@ h6 {
   }
 
   .hero__image {
+    position: static;
     margin-top: 30px;
     display: block;
     max-width: 100%;

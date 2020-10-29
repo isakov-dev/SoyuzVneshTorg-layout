@@ -1,16 +1,31 @@
 .hero {
 
+  position: relative;
   padding: 126px 0 157px;
-  background: url("../images/hero/bg.png") no-repeat right 54px center;
+  overflow: hidden;
 
-  @include desktop {
-    background-position: right -182px center;
+  &_index {
+
+    background: url("../images/hero/map.svg") no-repeat right 54px center;
+
+    @include desktop {
+      background-position: right -182px center;
+    }
+
+    @include laptop {
+      background-position: top 80px center;
+      background-size: 120% auto;
+    }
+
+  }
+
+  &_section {
+    background: url("../images/hero/section-bg.png") no-repeat center;
+    background-size: cover;
   }
 
   @include laptop {
     padding: 82px 0 111px;
-    background: url("../images/hero/bg-map.svg") no-repeat center top 82px;
-    background-size: 100% auto;
   }
 
   @include tablet {
@@ -60,9 +75,16 @@
 
   &__image {
 
-    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: 80px;
+
+    @include desktop {
+      right: -120px;
+    }
 
     @include laptop {
+      position: static;
       margin-top: 30px;
       display: block;
       max-width: 100%;
