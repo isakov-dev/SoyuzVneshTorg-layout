@@ -1,0 +1,180 @@
+.production {
+
+  margin-top: 80px;
+
+  @include laptop {
+    margin-top: 65px;
+  }
+
+  @include tablet {
+    margin-top: 52px;
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F2F2F2;
+    width: max-content;
+  }
+
+  &__tab {
+
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: $dark-gray;
+    padding: 0 30px 6px;
+    margin-bottom: -1px;
+    border-bottom: 3px solid transparent;
+
+    @include laptop {
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &.active {
+      font-weight: 600;
+      color: $almost-black;
+      border-bottom-color: $orange;
+    }
+
+  }
+
+  &__content {
+
+    margin-top: 50px;
+
+    @include laptop {
+      margin-top: 40px;
+    }
+
+    @include laptop {
+      margin-top: 30px;
+    }
+
+  }
+
+  &__description {
+
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+    margin-bottom: 32px;
+
+    @include laptop {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
+
+  &__section {
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid $green;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-green;
+    text-decoration: underline;
+    box-shadow: 0 0 15px rgba(0, 73, 51, 0.2);
+    padding: 20px;
+    text-align: center;
+
+    @include desktop {
+      font-size: 18px;
+      line-height: 27px;
+      padding: 16px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 13px;
+    }
+
+    &_disabled {
+      border-color: #E0E0E0;
+      color: #828282;
+      box-shadow: none;
+    }
+
+    &:not(:last-child) {
+
+      margin-bottom: 30px;
+
+      @include laptop {
+        margin-bottom: 20px;
+      }
+
+    }
+
+  }
+
+  &__info {
+
+    padding-left: 100px;
+
+    @include desktop {
+      padding-left: 80px;
+    }
+
+    @include laptop {
+      padding-left: 40px;
+    }
+
+    @include tablet {
+      padding-left: 15px;
+      margin-top: 30px;
+    }
+
+  }
+
+  &__image {
+
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+
+    @include tablet {
+      display: none;
+    }
+
+  }
+
+  &__caption {
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+
+    @include laptop {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+  }
+
+  &__button {
+
+    margin-top: 32px;
+
+    @include laptop {
+      margin-top: 20px;
+    }
+
+  }
+
+}
