@@ -39,4 +39,14 @@ $(window).on('load', function () {
         });
     }
 
+    let $team__slider = $('.team__slider');
+    if ($team__slider.length) {
+        $team__slider.flickity({
+            cellAlign: 'left',
+            contain: true,
+            pageDots: false,
+            percentPosition: true,
+        });
+    }
+
 });

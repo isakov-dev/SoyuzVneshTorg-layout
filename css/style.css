@@ -918,6 +918,62 @@ h6 {
   height: auto;
 }
 
+.team {
+  margin-top: 100px;
+}
+
+.team__slider {
+  margin-top: 40px;
+}
+
+.team__item {
+  width: 250px;
+  margin-right: 33px;
+}
+
+.team__card {
+  border: 2px solid #FFE6DA;
+  border-radius: 10px;
+  width: 250px;
+  overflow: hidden;
+}
+
+.team__photo-wrapper {
+  height: 250px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: url("../images/team/photo-bg.png") center;
+  background-size: cover;
+  padding-top: 16px;
+}
+
+.team__photo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.team__info {
+  padding: 0 18px 22px;
+  text-align: center;
+  color: #1c1c1c;
+  opacity: 0.9;
+}
+
+.team__name {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.team__position {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
 @media (max-width: 1299.98px) {
   .slider-wrapper {
     padding-left: calc(50px + 12px);
@@ -1214,6 +1270,10 @@ h6 {
     margin-right: 16px;
   }
 
+  .certificates {
+    margin-top: 75px;
+  }
+
   .certificates__slider {
     margin-top: 30px;
   }
@@ -1221,6 +1281,14 @@ h6 {
   .certificates__item {
     width: 33%;
     padding: 0 12px;
+  }
+
+  .team {
+    margin-top: 80px;
+  }
+
+  .team__slider {
+    margin-top: 30px;
   }
 }
 
@@ -1539,12 +1607,24 @@ h6 {
     line-height: 25px;
   }
 
+  .certificates {
+    margin-top: 50px;
+  }
+
   .certificates__slider {
     margin-top: 20px;
   }
 
   .certificates__item {
     width: 50%;
+  }
+
+  .team {
+    margin-top: 60px;
+  }
+
+  .team__slider {
+    margin-top: 20px;
   }
 }
 
