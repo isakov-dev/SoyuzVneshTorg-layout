@@ -54,6 +54,10 @@ h6 {
     line-height: 35px;
   }
 
+  &_left {
+    text-align: left;
+  }
+
 }
 
 .subtitle {
@@ -67,6 +71,10 @@ h6 {
 
   @include tablet {
     margin-bottom: 10px;
+  }
+
+  &_left {
+    text-align: left;
   }
 
 }

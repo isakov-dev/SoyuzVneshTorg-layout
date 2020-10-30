@@ -29,4 +29,14 @@ $(window).on('load', function () {
         });
     }
 
+    let $certificates__slider = $('.certificates__slider');
+    if ($certificates__slider.length) {
+        $certificates__slider.flickity({
+            cellAlign: 'left',
+            contain: true,
+            pageDots: false,
+            percentPosition: true,
+        });
+    }
+
 });

@@ -42,6 +42,10 @@ h6 {
   text-align: center;
 }
 
+.title_left {
+  text-align: left;
+}
+
 .subtitle {
   margin-bottom: 14px;
   font-weight: bold;
@@ -49,6 +53,10 @@ h6 {
   line-height: 24px;
   color: #014430;
   text-align: center;
+}
+
+.subtitle_left {
+  text-align: left;
 }
 
 .button {
@@ -851,6 +859,65 @@ h6 {
   padding: 0 20px;
 }
 
+.about {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: url("../images/about/bg.png");
+}
+
+.about__text {
+  margin-top: 33px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #363636;
+}
+
+.about__advantages {
+  margin-top: 40px;
+  margin-bottom: -40px;
+  justify-content: center;
+}
+
+.about__advantage {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.about__advantage-icon {
+  width: 70px;
+  flex-shrink: 0;
+  margin-right: 22px;
+}
+
+.about__advantage-text {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 32px;
+  color: #1c1c1c;
+  opacity: .9;
+}
+
+.certificates {
+  margin-top: 100px;
+}
+
+.certificates__slider {
+  margin-top: 40px;
+}
+
+.certificates__item {
+  width: 25%;
+  padding: 0 21px;
+  display: flex;
+  justify-content: center;
+}
+
+.certificates__scan {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (max-width: 1299.98px) {
   .slider-wrapper {
     padding-left: calc(50px + 12px);
@@ -922,6 +989,11 @@ h6 {
 
   .products__item {
     width: 25%;
+  }
+
+  .about__advantage-text {
+    font-size: 23px;
+    line-height: 29px;
   }
 }
 
@@ -1122,6 +1194,33 @@ h6 {
   .product__name {
     font-size: 22px;
     line-height: 29px;
+  }
+
+  .about__button {
+    margin-top: 25px;
+  }
+
+  .about__text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .about__advantages {
+    margin-top: 30px;
+  }
+
+  .about__advantage-icon {
+    width: 60px;
+    margin-right: 16px;
+  }
+
+  .certificates__slider {
+    margin-top: 30px;
+  }
+
+  .certificates__item {
+    width: 33%;
+    padding: 0 12px;
   }
 }
 
@@ -1408,6 +1507,45 @@ h6 {
     font-weight: 600;
     padding: 0;
   }
+
+  .about {
+    padding-bottom: 50px;
+  }
+
+  .about__button {
+    margin-top: 20px;
+  }
+
+  .about__button {
+    width: 100%;
+  }
+
+  .about__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .about__advantages {
+    margin-top: 20px;
+  }
+
+  .about__advantage-icon {
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .about__advantage-text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .certificates__slider {
+    margin-top: 20px;
+  }
+
+  .certificates__item {
+    width: 50%;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1496,5 +1634,10 @@ h6 {
 
   .products__item {
     width: 100%;
+  }
+
+  .certificates__item {
+    width: 100%;
+    padding: 0;
   }
 }

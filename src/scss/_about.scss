@@ -1,0 +1,107 @@
+.about {
+
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: url('../images/about/bg.png');
+
+  @include tablet {
+    padding-bottom: 50px;
+  }
+
+  &__button {
+
+    @include laptop {
+      margin-top: 25px;
+    }
+
+    @include tablet {
+      margin-top: 20px;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+  }
+
+  &__text {
+
+    margin-top: 33px;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+
+    @include laptop {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
+
+  &__advantages {
+
+    margin-top: 40px;
+    margin-bottom: -40px;
+    justify-content: center;
+
+    @include laptop {
+      margin-top: 30px;
+    }
+
+    @include tablet {
+      margin-top: 20px;
+    }
+
+  }
+
+  &__advantage {
+
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+
+    &-icon {
+
+      width: 70px;
+      flex-shrink: 0;
+      margin-right: 22px;
+
+      @include laptop {
+        width: 60px;
+        margin-right: 16px;
+      }
+
+      @include tablet {
+        width: 50px;
+        margin-right: 10px;
+      }
+
+    }
+
+    &-text {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 32px;
+      color: $almost-black;
+      opacity: .9;
+
+      @include desktop {
+        font-size: 23px;
+        line-height: 29px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+        line-height: 25px;
+      }
+
+    }
+
+  }
+
+}

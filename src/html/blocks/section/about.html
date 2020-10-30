@@ -1,0 +1,31 @@
+<div class="about">
+    <div class="container">
+        <div class="row align-items-end justify-content-between">
+            <div class="col-lg-auto">
+                <div class="subtitle subtitle_left">Кто мы</div>
+                <h2 class="title title_left">О нашей компании</h2>
+            </div>
+            <div class="col-lg-auto">
+                <button class="about__button button">Получить консультацию</button>
+            </div>
+        </div>
+        <div class="about__text row">
+            <div class="col-12">
+                ООО “СоюзВнешТорг” представляет собой успешную, стабильную и динамично развивающуюся компанию.
+                Мы оказываем полный спектр услуг по сопровождению импортных и экспортных операций, а также
+                консультирование на всех этапах внешнеэкономической деятельности. Отдельным крупным направлением
+                нашей деятельности являются поставки напитков крупных зарубежных пивных заводов. Мы являемся
+                официальным дистрибьютером, поэтому от нас вы получаете:
+            </div>
+        </div>
+        <div class="about__advantages row">
+            @@for (var i = 0; i < 3; i++) {
+                <div class="about__advantage col-lg-4 col-md-6">
+                    <img src="images/about/advantage.svg" alt="" class="about__advantage-icon">
+                    <div class="about__advantage-text">Приятные цены</div>
+                </div>
+            }
+        </div>
+    </div>
+    @@include('certificates.html')
+</div>
