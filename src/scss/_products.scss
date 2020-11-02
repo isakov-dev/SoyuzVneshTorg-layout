@@ -203,3 +203,203 @@
   }
 
 }
+
+.product-modal {
+
+  display: none;
+
+  &__content {
+
+    width: 1000px;
+    display: flex;
+    align-items: start;
+    background: $light-green;
+    overflow: hidden;
+    position: relative;
+
+    @include desktop {
+      width: 960px;
+    }
+
+    @include laptop {
+      width: 720px;
+      flex-direction: column;
+    }
+
+    @include tablet {
+      width: 540px;
+    }
+
+    @include phone {
+      width: 100%;
+    }
+
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: url("../images/products/modal-close.svg") center no-repeat;
+    background-size: contain;
+  }
+
+  &__left {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 348px;
+    flex-shrink: 0;
+
+    @include laptop {
+      width: 100%;
+    }
+
+  }
+
+  &__decor-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__decor-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__photo {
+    position: relative;
+    width: 328px;
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+  }
+
+  &__right {
+    padding: 40px 70px 70px 24px;
+
+    @include laptop {
+      padding: 20px 20px 50px;
+    }
+
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+    color: $almost-black;
+
+    @include laptop {
+      display: none;
+    }
+
+    &_mobile {
+
+      display: none;
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      @include laptop {
+        display: block;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      @include tablet {
+        font-size: 24px;
+        line-height: 35px;
+      }
+
+    }
+
+  }
+
+  &__description {
+
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+
+    @include laptop {
+      margin-top: 0;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+  }
+
+  &__specs_and_btn {
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @include laptop {
+      margin-top: 20px;
+    }
+
+    @include phone {
+      margin-top: 10px;
+      flex-direction: column;
+      align-items: unset;
+      justify-content: unset;
+    }
+
+  }
+
+  &__specs {
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+    margin-right: 20px;
+
+    @include laptop {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+  }
+
+  &__spec {
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__button {
+
+    @include phone {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+  }
+
+}

@@ -271,3 +271,31 @@ h6 {
   }
 
 }
+
+.fancybox-content {
+  padding: 0;
+}
+
+.fancybox-close-small {
+
+  width: 70px;
+  height: 70px;
+  padding: 15px !important;
+
+  svg {
+
+    path {
+      fill: #808080;
+    }
+
+  }
+
+}
+
+.fancybox-bg {
+  background: $dark-green;
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: .7;
+}

@@ -33,9 +33,15 @@
                                 @@for (var i = 0; i < 9; i++) {
                                     <div class="products__item product">
                                         <div class="product__photo-wrapper" style="background-image: url('images/products/product-layout.png')">
-                                            <img src="images/products/product.png" class="product__photo" alt="">
+                                            <a data-fancybox data-src="#product-modal" href="javascript:;">
+                                                <img src="images/products/product.png" class="product__photo" alt="">
+                                            </a>
                                         </div>
-                                        <div class="product__name">Жигули Барное</div>
+                                        <div class="product__name">
+                                            <a data-fancybox data-src="#product-modal" href="javascript:;">
+                                                Жигули Барное
+                                            </a>
+                                        </div>
                                     </div>
                                 }
                             </div>
@@ -46,9 +52,15 @@
                                 @@for (var i = 0; i < 2; i++) {
                                     <div class="products__item product">
                                         <div class="product__photo-wrapper" style="background-image: url('images/products/product-layout-2.png')">
-                                            <img src="images/products/product-2.png" class="product__photo" alt="">
+                                            <a data-fancybox data-src="#product-modal" href="javascript:;">
+                                                <img src="images/products/product-2.png" class="product__photo" alt="">
+                                            </a>
                                         </div>
-                                        <div class="product__name">Gorilla</div>
+                                        <div class="product__name">
+                                            <a data-fancybox data-src="#product-modal" href="javascript:;">
+                                                Gorilla
+                                            </a>
+                                        </div>
                                     </div>
                                 }
                             </div>
@@ -65,6 +77,32 @@
                         </div>
                     }
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="product-modal" id="product-modal">
+    <div class="product-modal__content">
+        <div class="product-modal__title product-modal__title_mobile">Жигули Барное</div>
+        <div class="product-modal__left">
+            <img src="images/products/decor-left.png" alt="" class="product-modal__decor-left">
+            <img src="images/products/decor-right.png" alt="" class="product-modal__decor-right">
+            <img src="images/products/product-modal.png" class="product-modal__photo" alt="">
+        </div>
+        <div class="product-modal__right">
+            <div class="product-modal__title">Жигули Барное</div>
+            <div class="product-modal__description">
+                «Жигули Барное» – пиво для культурного отдыха.
+                «Жигули Барное» варится по фирменному рецепту 1968 года.
+                Пиво из легендарного московского ресторана «Жигули», воплотившее в себе лучшие традиции XX века.
+            </div>
+            <div class="product-modal__specs_and_btn">
+                <div class="product-modal__specs">
+                    <div class="product-modal__spec">Крепость: 4,8%</div>
+                    <div class="product-modal__spec">Плотность: 12%</div>
+                </div>
+                <button class="product-modal__button button">Узнать цену</button>
             </div>
         </div>
     </div>
