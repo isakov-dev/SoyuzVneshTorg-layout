@@ -1,0 +1,84 @@
+.other-sections {
+
+  margin-top: 100px;
+  padding: 70px 0;
+  background: url("../images/other-sections/bg.png");
+
+  @include laptop {
+    margin-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  @include tablet {
+    margin-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  &__grid {
+
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 65px;
+    grid-row-gap: 65px;
+
+    @include desktop {
+      grid-column-gap: 40px;
+      grid-row-gap: 40px;
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include tablet {
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+    }
+
+    @include phone {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  &__image-wrapper {
+    box-shadow: 0 0 20px rgba(1, 68, 48, 0.15);
+    border-radius: 10px;
+    background: $white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__name {
+
+    margin-top: 9px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: $dark-green;
+
+    @include laptop {
+      margin-top: 12px;
+      font-size: 23px;
+      line-height: 28px;
+    }
+
+    @include tablet {
+      margin-top: 15px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+  }
+
+}
