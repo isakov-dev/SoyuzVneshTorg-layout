@@ -45,7 +45,9 @@
                         <a href="tel:+79045835377" class="header__phone">
                             <span class="header__number">+7 (904) 583 53 77</span>
                         </a>
-                        <a href="#" class="header__callback">Заказать звонок</a>
+                        <a href="javascript:void(0)" data-fancybox data-src="#form-modal" class="header__callback">
+                            Заказать звонок
+                        </a>
                     </div>
                 </div>
             </div>
@@ -476,6 +478,22 @@
                 </div>
             </div>
         </div>
+
+        <div class="form-modal" id="form-modal">
+    <div class="form-modal__content">
+        <div class="form-modal__title">Консультация специалиста</div>
+        <div class="form-modal__caption">Заполните данные и мы вам перезвоним.</div>
+        <div class="form-modal__form">
+            <div class="form-modal__form-plug">
+                Тут могла быть ваша форма
+            </div>
+        </div>
+        <div class="form-modal__agreement">
+            *Нажимая на кнопку “Заказать звонок” вы даете согласие на обработку ваших персональных данных
+        </div>
+        <button class="form-modal__button button">Заказать звонок</button>
+    </div>
+</div>
 
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>

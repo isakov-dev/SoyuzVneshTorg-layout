@@ -339,6 +339,58 @@ h6 {
   opacity: .8;
 }
 
+.form-modal {
+  display: none;
+}
+
+.form-modal__content {
+  width: 680px;
+  background: #E5FFF7;
+  padding: 40px 50px 50px;
+}
+
+.form-modal__title {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 43px;
+  color: #1c1c1c;
+}
+
+.form-modal__caption {
+  margin-top: 18px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #363636;
+}
+
+.form-modal__form {
+  margin-top: 40px;
+}
+
+.form-modal__form-plug {
+  height: 178px;
+  background: #363636;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.form-modal__agreement {
+  margin-top: 20px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #363636;
+  opacity: 0.7;
+}
+
+.form-modal__button {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .desktop-menu {
   display: flex;
   align-items: center;
@@ -1253,6 +1305,25 @@ h6 {
     margin-right: 0;
   }
 
+  .form-modal__content {
+    padding: 45px 30px 50px;
+  }
+
+  .form-modal__title {
+    font-size: 29px;
+    line-height: 39px;
+  }
+
+  .form-modal__caption {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .form-modal__form {
+    margin-top: 30px;
+  }
+
   .hero_index {
     background-position: top 80px center;
     background-size: 120% auto;
@@ -1555,6 +1626,26 @@ h6 {
 
   .tooltip-inner {
     padding: 10px 15px;
+  }
+
+  .form-modal__content {
+    width: 576px;
+    padding: 52px 20px 50px;
+  }
+
+  .form-modal__title {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .form-modal__caption {
+    margin-top: 11px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .form-modal__form {
+    margin-top: 20px;
   }
 
   .hero {
@@ -1932,6 +2023,10 @@ h6 {
 
   .header__callback {
     display: none;
+  }
+
+  .form-modal__content {
+    width: 100%;
   }
 
   .services__item {

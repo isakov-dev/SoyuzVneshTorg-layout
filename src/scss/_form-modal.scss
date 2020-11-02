@@ -1,0 +1,105 @@
+.form-modal {
+
+  display: none;
+
+  &__content {
+
+    width: 680px;
+    background: $light-green;
+    padding: 40px 50px 50px;
+
+    @include laptop {
+      padding: 45px 30px 50px;
+    }
+
+    @include tablet {
+      width: 576px;
+      padding: 52px 20px 50px;
+    }
+
+    @include phone {
+      width: 100%;
+    }
+
+  }
+
+  &__title {
+
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+    color: $almost-black;
+
+    @include laptop {
+      font-size: 29px;
+      line-height: 39px;
+    }
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+  }
+
+  &__caption {
+
+    margin-top: 18px;
+    font-size: 20px;
+    line-height: 30px;
+    color: $dark-gray;
+
+    @include laptop {
+      margin-top: 15px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @include tablet {
+      margin-top: 11px;
+      font-size: 16px;
+      line-height: 24px;
+
+    }
+
+  }
+
+  &__form {
+
+    margin-top: 40px;
+
+    @include laptop {
+      margin-top: 30px;
+    }
+
+    @include tablet {
+      margin-top: 20px;
+    }
+
+  }
+
+  &__form-plug {
+    height: 178px;
+    background: $dark-gray;
+    color: $white;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+
+  &__agreement {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    color: $dark-gray;
+    opacity: 0.7;
+  }
+
+  &__button {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
