@@ -25,8 +25,22 @@
   }
 
   &__item {
+
     width: 250px;
     margin-right: 33px;
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      width: calc(50% - 10px);
+      margin-right: 20px;
+    }
+
+    @include phone {
+      width: 100%;
+      margin-right: 0;
+    }
+
   }
 
   &__card {
