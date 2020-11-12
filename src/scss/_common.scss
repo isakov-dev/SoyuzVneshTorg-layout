@@ -87,11 +87,10 @@ h6 {
   justify-content: center;
   height: 50px;
   border-radius: 5px;
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: $white;
-  padding: 0 35px;
+  padding: 0 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   background: $green-gradient;
   border: none;
@@ -109,6 +108,19 @@ h6 {
 
   &:focus {
     outline: none;
+  }
+
+  &_download {
+
+    &::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: url("../images/button/download.svg") center no-repeat;
+      background-size: contain;
+      margin-right: 10px;
+    }
+
   }
 
 }
@@ -140,8 +152,8 @@ h6 {
       height: 50px;
       border-radius: 5px;
       background: transparent;
-      border: 2px solid $green;
-      color: $green;
+      border: 2px solid #01C68B;
+      color: #01C68B;
 
       &.previous {
         left: calc(-50px - 30px);

@@ -66,11 +66,10 @@ h6 {
   justify-content: center;
   height: 50px;
   border-radius: 5px;
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: #ffffff;
-  padding: 0 35px;
+  padding: 0 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   background: linear-gradient(221.11deg, #01C68B 0%, #004933 100%);
   border: none;
@@ -91,6 +90,15 @@ h6 {
   outline: none;
 }
 
+.button_download::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: url("../images/button/download.svg") center no-repeat;
+  background-size: contain;
+  margin-right: 10px;
+}
+
 .slider-wrapper {
   padding-left: 30px;
   padding-right: 30px;
@@ -101,8 +109,8 @@ h6 {
   height: 50px;
   border-radius: 5px;
   background: transparent;
-  border: 2px solid #00976A;
-  color: #00976A;
+  border: 2px solid #01C68B;
+  color: #01C68B;
 }
 
 .slider-wrapper .flickity-enabled .flickity-prev-next-button.previous {
@@ -192,7 +200,7 @@ h6 {
 }
 
 .header {
-  background: #E5FFF7;
+  background: #E6FFF7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -274,7 +282,7 @@ h6 {
   content: "";
   width: 1px;
   height: 50px;
-  background: #E5FFF7;
+  background: #E6FFF7;
   opacity: .4;
   position: absolute;
   right: 45px;
@@ -345,7 +353,7 @@ h6 {
 
 .form-modal__content {
   width: 680px;
-  background: #E5FFF7;
+  background: #E6FFF7;
   padding: 40px 50px 50px;
 }
 
@@ -459,8 +467,29 @@ h6 {
   right: 80px;
 }
 
+.hero__image_section {
+  right: unset;
+  left: 50%;
+  top: 50%;
+  bottom: unset;
+  transform: translateY(-50%);
+}
+
 .hero__button {
   margin-top: 70px;
+}
+
+.hero__decor {
+  position: absolute;
+  left: 0;
+}
+
+.hero__decor_top {
+  top: 0;
+}
+
+.hero__decor_bottom {
+  bottom: 0;
 }
 
 .services {
@@ -591,7 +620,7 @@ h6 {
 .stages {
   margin-top: 100px;
   padding: 50px 0;
-  background: url("../images/stages/map.png") center no-repeat, #E5FFF7;
+  background: url("../images/stages/map.png") center no-repeat, #E6FFF7;
   background-size: cover;
   overflow: hidden;
 }
@@ -835,6 +864,26 @@ h6 {
 .products {
   padding-top: 100px;
   padding-bottom: 100px;
+  position: relative;
+}
+
+.products__decor {
+  position: absolute;
+}
+
+.products__decor_top {
+  top: 0;
+  right: 0;
+}
+
+.products__decor_left {
+  top: 40%;
+  left: 0;
+}
+
+.products__decor_right {
+  right: 0;
+  bottom: 0;
 }
 
 .products__tabs {
@@ -941,7 +990,7 @@ h6 {
   width: 1000px;
   display: flex;
   align-items: start;
-  background: #E5FFF7;
+  background: #E6FFF7;
   overflow: hidden;
   position: relative;
 }
@@ -1345,9 +1394,11 @@ h6 {
   }
 
   .hero__image {
+    transform: unset;
     position: static;
     margin-top: 30px;
     display: block;
+    width: 500px;
     max-width: 100%;
   }
 
@@ -1672,6 +1723,10 @@ h6 {
     width: 100%;
   }
 
+  .hero__decor {
+    display: none;
+  }
+
   .services {
     padding: 40px 0 45px;
   }
@@ -1843,6 +1898,10 @@ h6 {
   .products {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  .products__decor {
+    display: none;
   }
 
   .products__tabs {
