@@ -43,12 +43,27 @@
 
   }
 
-  &__menu-item {
+  &__menu-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 30px;
+
+    > li {
+      a {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
 
     @include desktop {
       display: none;
     }
+  }
 
+  &__menu-item {
     &_logo {
 
       @include desktop {
@@ -71,9 +86,7 @@
   }
 
   &__menu-link {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
+
   }
 
   &__contacts {
