@@ -37,38 +37,11 @@
 
   }
 
-  &__form {
-
+  .form {
     margin-top: 30px;
 
     @include tablet {
       margin-top: 20px;
     }
-
   }
-
-  &__plug {
-
-    height: 50px;
-    background: $dark-gray;
-    color: $white;
-    font-size: 40px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-
-    @include tablet {
-      height: 275px;
-    }
-
-  }
-
-  &__agreement {
-    margin-top: 20px;
-    font-size: 13px;
-    line-height: 19px;
-    color: $dark-gray;
-    opacity: .7;
-  }
-
 }

@@ -23,6 +23,7 @@ function styles() {
         .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
         .pipe(gcmq())
         .pipe(gulp.dest(path.build.css))
+        .pipe(gulp.dest('../#test/wp-content/themes/Custom/css/'))
 }
 
 function html() {
