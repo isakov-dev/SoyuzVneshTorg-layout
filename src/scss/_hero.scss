@@ -124,20 +124,22 @@
   }
 
   &__decor {
-
     position: absolute;
-    left: 0;
+    left: -40px;
+    pointer-events: none;
 
     @include tablet {
       display: none;
     }
 
     &_top {
-      top: 0;
+      transform: rotate(200deg);
+      top: -50px;
     }
 
     &_bottom {
-      bottom: 0;
+      transform: rotate(100deg);
+      bottom: -60px;
     }
 
   }

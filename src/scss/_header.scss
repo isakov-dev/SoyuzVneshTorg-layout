@@ -45,11 +45,11 @@
     display: flex;
     align-items: center;
 
-    @include phone {
+    /*@include phone {
       width: 40px;
       height: 40px;
       justify-content: center;
-    }
+    }*/
 
     &::before {
 
@@ -61,7 +61,10 @@
       margin-right: 15px;
 
       @include phone {
-        margin-right: 0;
+        //margin-right: 0;
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
       }
 
     }
@@ -76,7 +79,8 @@
     color: $almost-black;
 
     @include phone {
-      display: none;
+      /*display: none;*/
+      font-size: 17px;
     }
 
   }
@@ -90,7 +94,8 @@
     color: $green;
 
     @include phone {
-      display: none;
+      /*display: none;*/
+      margin-top: 7px;
     }
 
     &:hover {

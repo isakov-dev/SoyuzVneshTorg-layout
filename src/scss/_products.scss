@@ -3,6 +3,7 @@
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
+  overflow: hidden;
 
   @include laptop {
     padding-top: 80px;
@@ -15,26 +16,32 @@
   }
 
   &__decor {
-
     position: absolute;
+    width: 180px;
+    pointer-events: none;
+    opacity: .8;
+
 
     @include tablet {
       display: none;
     }
 
     &_top {
-      top: 0;
-      right: 0;
+      top: -40px;
+      right: -40px;
+      transform: rotate(-110deg);
     }
 
     &_left {
       top: 40%;
-      left: 0;
+      left: -80px;
+      transform: rotate(150deg);
     }
 
     &_right {
-      right: 0;
-      bottom: 0;
+      bottom: 60px;
+      right: -36px;
+      transform: rotate(-20deg);
     }
 
   }
@@ -44,7 +51,8 @@
     margin-top: 70px;
     display: flex;
     flex-wrap: nowrap;
-    overflow-y: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     border-bottom: 1px solid #F2F2F2;
 
     @include laptop {
@@ -238,7 +246,6 @@
 
     width: 1000px;
     display: flex;
-    align-items: start;
     background: $light-green;
     overflow: hidden;
     position: relative;
@@ -248,12 +255,8 @@
     }
 
     @include laptop {
-      width: 720px;
-      flex-direction: column;
-    }
-
-    @include tablet {
       width: 540px;
+      flex-direction: column;
     }
 
     @include phone {
@@ -278,12 +281,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 60px 10px;
     width: 348px;
     flex-shrink: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @include laptop {
       width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
   }
@@ -302,9 +309,8 @@
 
   &__photo {
     position: relative;
-    width: 328px;
-    max-width: 100%;
-    height: auto;
+    max-width: 330px;
+    max-height: 330px;
     z-index: 2;
   }
 

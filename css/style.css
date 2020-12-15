@@ -9,6 +9,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -226,6 +227,11 @@ h6 {
 .header__phone {
   display: flex;
   align-items: center;
+  /*@include phone {
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+    }*/
 }
 
 .header__phone::before {
@@ -360,6 +366,7 @@ h6 {
 }
 
 .form__input-row label {
+  display: block;
   font-size: 16px;
   line-height: 24px;
   color: #363636;
@@ -378,6 +385,11 @@ h6 {
   margin-right: 30px;
 }
 
+.form .button.disabled {
+  pointer-events: none;
+  opacity: .8;
+}
+
 .form__agreement {
   font-size: 13px;
   line-height: 20px;
@@ -392,7 +404,8 @@ h6 {
   display: none !important;
 }
 
-.input {
+.input,
+.textarea {
   max-width: 100%;
   width: 100%;
   height: 50px;
@@ -406,13 +419,21 @@ h6 {
   transition: all .2s ease;
 }
 
-.input:focus {
+.input:focus,
+.textarea:focus {
   border-color: #01C68B;
 }
 
-.input.wpcf7-not-valid {
+.input.wpcf7-not-valid,
+.textarea.wpcf7-not-valid {
   color: #b90000;
   border-color: #B90000;
+}
+
+.textarea {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 5em;
 }
 
 .form-modal {
@@ -439,6 +460,11 @@ h6 {
   color: #363636;
 }
 
+.form-modal__success-img {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .form-modal .form {
   margin-top: 40px;
 }
@@ -460,10 +486,9 @@ h6 {
 .desktop-menu > li {
   display: flex;
   height: 100%;
-}
-
-.desktop-menu > li[class*='current'] > a {
-  border-bottom-color: #E33100;
+  /*&[class*='current'] > a {
+      border-bottom-color: $orange;
+    }*/
 }
 
 .desktop-menu > li a {
@@ -533,15 +558,18 @@ h6 {
 
 .hero__decor {
   position: absolute;
-  left: 0;
+  left: -40px;
+  pointer-events: none;
 }
 
 .hero__decor_top {
-  top: 0;
+  transform: rotate(200deg);
+  top: -50px;
 }
 
 .hero__decor_bottom {
-  bottom: 0;
+  transform: rotate(100deg);
+  bottom: -60px;
 }
 
 .services {
@@ -550,7 +578,7 @@ h6 {
 }
 
 .services__row {
-  margin: 40px -15px -50px;
+  margin: 40px -12px -50px;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -831,13 +859,14 @@ h6 {
 }
 
 .contacts {
-  background: url("../images/contacts/map.jpg") center no-repeat;
-  background-size: cover;
+  position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
 .contacts__card {
+  position: relative;
+  z-index: 1;
   background: #ffffff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
   padding: 30px 40px 70px;
@@ -874,6 +903,14 @@ h6 {
   color: #363636;
 }
 
+.contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .questions-left {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -900,32 +937,40 @@ h6 {
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
+  overflow: hidden;
 }
 
 .products__decor {
   position: absolute;
+  width: 180px;
+  pointer-events: none;
+  opacity: .8;
 }
 
 .products__decor_top {
-  top: 0;
-  right: 0;
+  top: -40px;
+  right: -40px;
+  transform: rotate(-110deg);
 }
 
 .products__decor_left {
   top: 40%;
-  left: 0;
+  left: -80px;
+  transform: rotate(150deg);
 }
 
 .products__decor_right {
-  right: 0;
-  bottom: 0;
+  bottom: 60px;
+  right: -36px;
+  transform: rotate(-20deg);
 }
 
 .products__tabs {
   margin-top: 70px;
   display: flex;
   flex-wrap: nowrap;
-  overflow-y: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   border-bottom: 1px solid #F2F2F2;
 }
 
@@ -1024,7 +1069,6 @@ h6 {
 .product-modal__content {
   width: 1000px;
   display: flex;
-  align-items: start;
   background: #E6FFF7;
   overflow: hidden;
   position: relative;
@@ -1045,9 +1089,11 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 60px 10px;
   width: 348px;
   flex-shrink: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .product-modal__decor-left {
@@ -1064,9 +1110,8 @@ h6 {
 
 .product-modal__photo {
   position: relative;
-  width: 328px;
-  max-width: 100%;
-  height: auto;
+  max-width: 330px;
+  max-height: 330px;
   z-index: 2;
 }
 
@@ -1581,12 +1626,14 @@ h6 {
   }
 
   .product-modal__content {
-    width: 720px;
+    width: 540px;
     flex-direction: column;
   }
 
   .product-modal__left {
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .product-modal__right {
@@ -1791,6 +1838,8 @@ h6 {
   .production__tab {
     font-size: 20px;
     line-height: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .production__description {
@@ -1909,6 +1958,7 @@ h6 {
   .contacts {
     padding-top: 70px;
     padding-bottom: 70px;
+    background: url("../images/contacts/map.jpg") center no-repeat;
   }
 
   .contacts__card {
@@ -1992,10 +2042,6 @@ h6 {
     line-height: 25px;
     font-weight: 600;
     padding: 0;
-  }
-
-  .product-modal__content {
-    width: 540px;
   }
 
   .product-modal__title_mobile {
@@ -2116,22 +2162,20 @@ h6 {
     max-height: 60px;
   }
 
-  .header__phone {
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-  }
-
   .header__phone::before {
-    margin-right: 0;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
   }
 
   .header__number {
-    display: none;
+    /*display: none;*/
+    font-size: 17px;
   }
 
   .header__callback {
-    display: none;
+    /*display: none;*/
+    margin-top: 7px;
   }
 
   .form-modal__content {
